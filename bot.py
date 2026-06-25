@@ -9,8 +9,8 @@ import json
 import os
 from datetime import datetime
 
-BOT_TOKEN = 8908020561:AAHA52gPEwUXeO0a0kskG7NtxIaY6jYrCc8
-GEMINI_API_KEY = AQ.Ab8RN6JAPbEVkD8u-mXjWTZdjUR7famIZmOknGZUo3EYT6olpg 
+BOT_TOKEN = "8908020561:AAHA52gPEwUXeO0a0kskG7NtxIaY6jYrCc8"
+GEMINI_API_KEY = "AQ.Ab8RN6JAPbEVkD8u-mXjWTZdjUR7famIZmOknGZUo3EYT6olpg"
 # İstifadəçiləri saxlayan fayl
 USERS_FILE = "users.json"
 
