@@ -70,6 +70,9 @@ Hadisələr:
         gemini_url,
         json={"contents": [{"parts": [{"text": prompt}]}]}
     )
+
+    print(gemini_response.json())
+        
     return gemini_response.json()["candidates"][0]["content"]["parts"][0]["text"]
 
 def hamiya_gonder():
@@ -82,15 +85,17 @@ def hamiya_gonder():
         metn = fakt_metni_hazirla()
 
         for chat_id in users:
-            requests.post(
-                f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
-                json={
-                    "chat_id": chat_id,
-                    "text": metn,
-                    "parse_mode": "Markdown"
-                }
-            )
-            print(f"✅ Göndərildi: {chat_id}")
+            r = requests.post(
+    f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
+    json={
+        "chat_id": chat_id,
+        "text": metn,
+        "parse_mode": "Markdown"
+    }
+)
+
+print(r.json())
+print(f"✅ Göndərildi: {chat_id}")
 
     except Exception as e:
         print(f"❌ Xəta: {e}")
