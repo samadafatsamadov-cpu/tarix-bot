@@ -1,11 +1,3 @@
-import subprocess
-import sys
-subprocess.check_call([sys.executable, "-m", "pip", "install", "--break-system-packages", "--user", "requests", "schedule"])
-
-import importlib
-import site
-importlib.reload(site)
-
 import requests
 import schedule
 import time
